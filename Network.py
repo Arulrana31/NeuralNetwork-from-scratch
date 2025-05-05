@@ -260,7 +260,14 @@ class network:
                 for k in range(1, self.n_layers):
                     if batch_w[k] is not None:  # Skip input layer
                         # Add L2 regularization term to gradient
-                        batch_w[k] = batch_w[k] + lambda_ * self.layers[k].w
+                        if reg == "L2":
+                            batch_w[k] = batch_w[k] + lambda_ * self.layers[k].w
+
+                        elif reg == "L1":
+                            batch_w[k] = batch_w[k] + lambda_ * np.sign(
+                                self.layers[k].w
+                            )
+                            
                         m_w[k] = beta1 * m_w[k] + (1 - beta1) * batch_w[k]
                         v_w[k] = beta2 * v_w[k] + (1 - beta2) * (batch_w[k] ** 2)
 
