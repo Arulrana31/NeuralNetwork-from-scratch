@@ -32,4 +32,4 @@ This repository provides a Python implementation of a feedforward neural network
 *   **`Functions.py`**: Defines the `function` class, which acts as a provider for various activation functions (`normal` method) and cost functions (`cost_normal` method), along with their respective derivatives (`derivative`, `cost_der`) needed for backpropagation [3].
 
 ## Basic Usage
-A small example of using these files is provided as `Training_NN.ipynb` on the famous MNIST set. The file is just for reference and is not created to optimally create a model to represent the set. To further understand the features, check out the inputs the train function can take in the `Network.py` file
+A small example of using these files is provided as `train_NN.ipynb` on the famous MNIST set. The file is just for reference and is not created to optimally create a model to represent the set. To further understand the features, check out the inputs the train function can take in the `Network.py` file
